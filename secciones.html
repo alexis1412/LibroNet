@@ -1,0 +1,188 @@
+<section class="ofertas-especiales" data-aos="zoom-in" data-aos-duration="1200">
+  <h2 class="titulo-ofertas">Ofertas Especiales</h2>
+  <div class="oferta-container">
+    <div class="oferta" data-aos="zoom-in" data-aos-duration="1000">
+      <img src="img/oferta1.jpg" alt="Oferta 1" class="oferta-img" />
+      <div class="oferta-info">
+        <h3>30% de descuento en libros de ficción</h3>
+        <p>Aplica a todos los libros de la categoría Ficción. Solo por tiempo limitado.</p>
+        <button class="btn-oferta">¡Aprovecha ahora!</button>
+      </div>
+    </div>
+
+    <div class="oferta" data-aos="zoom-in" data-aos-duration="1200">
+      <img src="img/oferta2.jpg" alt="Oferta 2" class="oferta-img" />
+      <div class="oferta-info">
+        <h3>Compra 2, lleva 1 gratis en novelas gráficas</h3>
+        <p>Promoción válida hasta fin de mes. No acumulable con otras ofertas.</p>
+        <button class="btn-oferta">¡Aprovecha ahora!</button>
+      </div>
+    </div>
+
+    <div class="oferta" data-aos="zoom-in" data-aos-duration="1400">
+      <img src="img/oferta3.jpg" alt="Oferta 3" class="oferta-img" />
+      <div class="oferta-info">
+        <h3>2x1 en libros infantiles</h3>
+        <p>Elige 2 libros para niños y paga solo 1. ¡Haz que tus hijos lean más!</p>
+        <button class="btn-oferta">¡Aprovecha ahora!</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="buscar">
+  <div class="c-formContainer">
+    <form class="c-form">
+      <input class="c-form__input" placeholder="Buscar libros..." type="text" required />
+      <button class="c-form__button" type="submit">Buscar</button>
+    </form>
+  </div>
+</div>
+
+
+
+<style>
+  /* Ofertas */
+  .ofertas {
+    padding: 3rem;
+    background-color: #faf5e7;
+    text-align: center;
+  }
+
+  .titulo-ofertas {
+    font-size: 2rem;
+    color: #1f2d5a;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .oferta-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .oferta {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+
+  .oferta:hover {
+    transform: scale(1.05);
+  }
+
+  .oferta-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .oferta-info {
+    padding: 1rem;
+  }
+
+  .oferta-info h3 {
+    color: #e91e63;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .oferta-info p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-oferta {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-oferta:hover {
+    background-color: #c2185b;
+  }
+
+
+
+  
+/* Buscador */
+.buscar {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.c-formContainer {
+  position: relative;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.c-formContainer .c-form {
+  width: 45rem;
+  height: 4.6rem;
+  position: relative;
+  margin: auto;
+  background-color: #1f2d5a98;
+  border-radius: 10px;
+}
+
+.c-formContainer .c-form__input,
+.c-formContainer .c-form__buttonLabel {
+  visibility: visible;
+  opacity: 1;
+}
+
+.c-form {
+  padding: 0.625em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.c-form__input,
+.c-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.c-form__input {
+  color: black;
+  padding: 0 0.714em;
+  font-size: 1em;
+  opacity: 0.1;
+  font-weight: 200;
+  flex-grow: 1;
+}
+
+.c-form__button {
+  color: inherit;
+  padding: 0;
+  height: 90%;
+  width: 6em;
+  top: -25px;
+  position: relative;
+  padding: 1.7rem 2.5rem;
+  background-color: #f15b2400;
+}
+
+</style>
+

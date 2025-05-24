@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibroNet - Tu librería online</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="categorias.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="home.html"><img src="img/logo2.jpg" alt="" /></a>
+      </div>
+      <nav>
+        <a href="home.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="login.html">Cuenta</a>
+      </nav>
+    </header>
+
+    <section class="pagina-categorias">
+      <h2>Categorías</h2>
+      <div class="barra-busqueda" data-aos="fade-up" data-aos-delay="50">
+        <input type="text" id="inputBusqueda" placeholder="Buscar libros por título..." />
+      </div>
+      <div class="filtros-categorias">
+        <button class="filtro activo" data-categoria="todos">Todos</button>
+        <button class="filtro" data-categoria="Ficcion">Ficción</button>
+        <button class="filtro" data-categoria="Tecnologia">Tecnología</button>
+        <button class="filtro" data-categoria="Juvenil">Juvenil</button>
+        <button class="filtro" data-categoria="Academico">Académico</button>
+        <button class="filtro" data-categoria="Filosofia">Filosofía</button>
+        <button class="filtro" data-categoria="Historia">Historia</button>
+        <button class="filtro" data-categoria="Arte">Arte</button>
+      </div>
+
+      <div class="libros-grid">
+        <!-- Ficción -->
+        <div
+          class="libro"
+          data-categoria="Ficcion"
+          data-titulo="El universo de lo posible"
+          data-precio="12.99"
+          data-descripcion="Una fascinante historia sobre mundos paralelos que te atrapará desde la primera página."
+          data-imagen="img/libro-universo.jpg"
+            data-autor="Campi"
+        >
+          <img src="img/libro-universo.jpg" alt="Libro de Ficción" />
+          <h3>El universo de lo posible</h3>
+          <p class="precio">$12.99</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Ficcion"
+          data-titulo="A la sombra del tiempo"
+          data-precio="14.50"
+          data-descripcion="Un viaje misterioso a través del tiempo."
+          data-imagen="img/libro2-ficcion.jpg"
+          
+          data-autor="Jen Minkman"
+        >
+          <img src="img/libro2-ficcion.jpg" alt="A la sombra del tiempo" />
+          <h3>A la sombra del tiempo</h3>
+          <p class="precio">$14.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Ficcion"
+          data-titulo="El fin de la eternidad"
+          data-precio="11.75"
+          data-descripcion="Clásico de la ciencia ficción que desafía la realidad."
+          data-imagen="img/libro3-ficcion.jpg"
+          data-autor="Issac Asimow"
+        >
+          <img src="img/libro3-ficcion.jpg" alt="El fin de la eternidad" />
+          <h3>El fin de la eternidad</h3>
+          <p class="precio">$11.75</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Ficcion"
+          data-titulo="Mundos invisibles"
+          data-precio="13.20"
+          data-descripcion="Exploración de universos paralelos y realidades ocultas."
+          data-imagen="img/libro4-ficcion.jpg"
+            data-autor="Elsa Aragon"
+        >
+          <img src="img/libro4-ficcion.jpg" alt="Mundos invisibles" />
+          <h3>Mundos invisibles</h3>
+          <p class="precio">$13.20</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Ficcion"
+          data-titulo="Voces en la oscuridad"
+          data-precio="10.99"
+          data-descripcion="Un thriller psicológico que mantendrá tu mente alerta."
+          data-imagen="img/libro5-ficcion.jpg"
+            data-autor="Junji lito"
+        >
+          <img src="img/libro5-ficcion.jpg" alt="Voces en la oscuridad" />
+          <h3>Voces en la oscuridad</h3>
+          <p class="precio">$10.99</p>
+        </div>
+
+        <!-- Tecnología -->
+        <div
+          class="libro"
+          data-categoria="Tecnologia"
+          data-titulo="Python para Todos"
+          data-precio="15.00"
+          data-descripcion="Aprende Python desde cero con ejemplos prácticos y ejercicios."
+          data-imagen="img/tec1.jpg"
+            data-autor="Raul Gonzalez"
+        >
+          <img src="img/tec1.jpg" alt="Libro de Tecnología" />
+          <h3>Python para Todos</h3>
+          <p class="precio">$15.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Tecnologia"
+          data-titulo="Inteligencia Artificial 101"
+          data-precio="18.75"
+          data-descripcion="Introducción accesible a la IA para principiantes."
+          data-imagen="img/tec2.jpg"
+            data-autor="Lasser Rouhianen"
+        >
+          <img src="img/tec2.jpg" alt="Inteligencia Artificial 101" />
+          <h3>Inteligencia Artificial 101</h3>
+          <p class="precio">$18.75</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Tecnologia"
+          data-titulo="Redes y Seguridad"
+          data-precio="20.00"
+          data-descripcion="Guía completa sobre redes informáticas y seguridad."
+          data-imagen="img/tec3.jpg"
+            data-autor="Matias katz"
+        >
+          <img src="img/tec3.jpg" alt="Redes y Seguridad" />
+          <h3>Redes y Seguridad</h3>
+          <p class="precio">$20.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Tecnologia"
+          data-titulo="Dominando JavaScript"
+          data-precio="22.50"
+          data-descripcion="Técnicas avanzadas para el desarrollo web moderno"
+          data-imagen="img/tec4.jpg"
+            data-autor="Carlos Azaustre"
+        >
+          <img src="img/tec4.jpg" alt="Desarrollo Web Moderno" />
+          <h3>Dominando JavaScript</h3>
+          <p class="precio">$22.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Tecnologia"
+          data-titulo="Bases de Datos Avanzadas"
+          data-precio="19.99"
+          data-descripcion="Conceptos avanzados para el manejo de bases de datos."
+          data-imagen="img/tec5.jpg"
+            data-autor="Jose Corcoles"
+        >
+          <img src="img/tec5.jpg" alt="Bases de Datos Avanzadas" />
+          <h3>Bases de Datos Avanzadas</h3>
+          <p class="precio">$19.99</p>
+        </div>
+
+        <!-- Juvenil -->
+        <div
+          class="libro"
+          data-categoria="Juvenil"
+          data-titulo="Aventuras en el Bosque"
+          data-precio="9.99"
+          data-descripcion="Una emocionante historia para jóvenes exploradores."
+          data-imagen="img/ju1.jpg"
+            data-autor="Usborne"
+        >
+          <img src="img/ju1.jpg" alt="Aventuras en el Bosque" />
+          <h3>Aventuras en el Bosque</h3>
+          <p class="precio">$9.99</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Juvenil"
+          data-titulo="El club secreto"
+          data-precio="11.20"
+          data-descripcion="Un grupo de amigos descubre un misterio sorprendente."
+          data-imagen="img/ju2.jpg"
+            data-autor="Mitch Krpata"
+        >
+          <img src="img/ju2.jpg" alt="El club secreto" />
+          <h3>El club secreto</h3>
+          <p class="precio">$11.20</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Juvenil"
+          data-titulo="La isla perdida"
+          data-precio="10.50"
+          data-descripcion="Una aventura llena de peligros y amistad."
+          data-imagen="img/ju3.jpg"
+            data-autor="Rob Stevens"
+        >
+          <img src="img/ju3.jpg" alt="La isla perdida" />
+          <h3>La isla perdida</h3>
+          <p class="precio">$10.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Juvenil"
+          data-titulo="Secretos del castillo"
+          data-precio="12.00"
+          data-descripcion="Descubre los misterios que oculta un viejo castillo."
+          data-imagen="img/ju4.jpg"
+            data-autor="osvaldo Semrik"
+        >
+          <img src="img/ju4.jpg" alt="Secretos del castillo" />
+          <h3>Secretos del castillo</h3>
+          <p class="precio">$12.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Juvenil"
+          data-titulo="La búsqueda mágica"
+          data-precio="9.75"
+          data-descripcion="Una historia de magia y valentía para jóvenes lectores."
+          data-imagen="img/ju5.jpg"
+            data-autor="Maria Lopez"
+        >
+          <img src="img/ju5.jpg" alt="La búsqueda mágica" />
+          <h3>La búsqueda mágica</h3>
+          <p class="precio">$9.75</p>
+        </div>
+
+        <!-- Académico -->
+        <div
+          class="libro"
+          data-categoria="Academico"
+          data-titulo="Matemáticas Avanzadas"
+          data-precio="25.00"
+          data-descripcion="Conceptos avanzados para estudiantes universitarios."
+          data-imagen="img/aca1.jpg"
+            data-autor="Mariana Parra"
+        >
+          <img src="img/aca1.jpg" alt="Matemáticas Avanzadas" />
+          <h3>Matemáticas Avanzadas</h3>
+          <p class="precio">$25.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Academico"
+          data-titulo="Física Moderna"
+          data-precio="27.50"
+          data-descripcion="Teoría y aplicaciones en la física contemporánea."
+          data-imagen="img/aca2.jpg"
+            data-autor="Simone Malacrida"
+        >
+          <img src="img/aca2.jpg" alt="Física Moderna" />
+          <h3>Física Moderna</h3>
+          <p class="precio">$27.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Academico"
+          data-titulo="Química Orgánica"
+          data-precio="23.00"
+          data-descripcion="Guía completa para química orgánica."
+          data-imagen="img/aca3.jpg"
+            data-autor="Wade"
+        >
+          <img src="img/aca3.jpg" alt="Química Orgánica" />
+          <h3>Química Orgánica</h3>
+          <p class="precio">$23.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Academico"
+          data-titulo="Historia del Arte"
+          data-precio="21.75"
+          data-descripcion="Un recorrido por la evolución del arte a través del tiempo."
+          data-imagen="img/aca4.jpg"
+            data-autor="Laura Mendoza"
+        >
+          <img src="img/aca4.jpg" alt="Historia del Arte" />
+          <h3>Historia del Arte</h3>
+          <p class="precio">$21.75</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Academico"
+          data-titulo="Economía Básica"
+          data-precio="20.00"
+          data-descripcion="Principios fundamentales de la economía."
+          data-imagen="img/aca5.jpg"
+            data-autor="Thomas Sowell"
+        >
+          <img src="img/aca5.jpg" alt="Economía Básica" />
+          <h3>Economía Básica</h3>
+          <p class="precio">$20.00</p>
+        </div>
+
+        <!-- Filosofía -->
+        <div
+          class="libro"
+          data-categoria="Filosofia"
+          data-titulo="El arte de pensar"
+          data-precio="13.50"
+          data-descripcion="Introducción a las grandes corrientes filosóficas."
+          data-imagen="img/fi1.jpg"
+          data-autor="Rolf Dobelli"
+        >
+          <img src="img/fi1.jpg" alt="El arte de pensar" />
+          <h3>El arte de pensar</h3>
+          <p class="precio">$13.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Filosofia"
+          data-titulo="Filosofía para la vida"
+          data-precio="15.00"
+          data-descripcion="Cómo aplicar la filosofía en el día a día."
+          data-imagen="img/fi2.jpg"
+          data-autor="Walter Riso"
+        >
+          <img src="img/fi2.jpg" alt="Filosofía para la vida" />
+          <h3>Filosofía para la vida</h3>
+          <p class="precio">$15.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Filosofia"
+          data-titulo="Pensadores Clásicos"
+          data-precio="14.00"
+          data-descripcion="Obras de los filósofos más influyentes de la historia."
+          data-imagen="img/fi3.jpg"
+            data-autor="Voltaire"
+        >
+          <img src="img/fi3.jpg" alt="Pensadores Clásicos" />
+          <h3>Pensadores Clásicos</h3>
+          <p class="precio">$14.00</p>
+        </div>
+
+        <!-- Historia -->
+        <div
+          class="libro"
+          data-categoria="Historia"
+          data-titulo="Historia Universal"
+          data-precio="19.00"
+          data-descripcion="Una mirada completa a la historia de la humanidad."
+          data-imagen="img/h1.jpg"
+           data-autor="Rodríguez, Gomez, Ramirez"
+        >
+          <img src="img/h1.jpg" alt="Historia Universal" />
+          <h3>Historia Universal</h3>
+          <p class="precio">$19.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Historia"
+          data-titulo="Guerras y Paz"
+          data-precio="18.50"
+          data-descripcion="Análisis de los conflictos más importantes del mundo."
+          data-imagen="img/h2.jpg"
+            data-autor="Leon Colstoi"
+        >
+          <img src="img/h2.jpg" alt="Guerras y Paz" />
+          <h3>Guerras y Paz</h3>
+          <p class="precio">$18.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Historia"
+          data-titulo="Civilizaciones Antiguas"
+          data-precio="20.00"
+          data-descripcion="Estudio de las primeras grandes civilizaciones."
+          data-imagen="img/h3.jpg"
+           data-autor="Paola Trifoni"
+        >
+          <img src="img/h3.jpg" alt="Civilizaciones Antiguas" />
+          <h3>Civilizaciones Antiguas</h3>
+          <p class="precio">$20.00</p>
+        </div>
+
+        <!-- Arte -->
+        <div
+          class="libro"
+          data-categoria="Arte"
+          data-titulo="Técnicas de pintura"
+          data-precio="17.00"
+          data-descripcion="Guía práctica para artistas en formación."
+          data-imagen="img/a1.jpg"
+           data-autor="Libsa"
+        >
+          <img src="img/a1.jpg" alt="Técnicas de pintura" />
+          <h3>Técnicas de pintura</h3>
+          <p class="precio">$17.00</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Arte"
+          data-titulo="Historia del arte moderno"
+          data-precio="19.50"
+          data-descripcion="Evolución del arte en los siglos XX y XXI."
+          data-imagen="img/a2.jpg"
+          data-autor="Norbert Lynton"
+        >
+          <img src="img/a2.jpg" alt="Historia del arte moderno" />
+          <h3>Historia del arte moderno</h3>
+          <p class="precio">$19.50</p>
+        </div>
+        <div
+          class="libro"
+          data-categoria="Arte"
+          data-titulo="Escultura contemporánea"
+          data-precio="18.00"
+          data-descripcion="Tendencias actuales en escultura."
+          data-imagen="img/a3.jpg"
+           data-autor="Javier Maderuelo "
+        >
+          <img src="img/a3.jpg" alt="Escultura contemporánea" />
+          <h3>Escultura contemporánea</h3>
+          <p class="precio">$18.00</p>
+        </div>
+      </div>
+
+      <!-- Mensaje cuando no hay resultados -->
+      <p id="mensajeNoEncontrado" style="display: none; color: red; margin-top: 20px">No se encontraron libros que coincidan con tu búsqueda.</p>
+
+      <!-- Contenedor paginación -->
+      <div id="paginacion" class="paginacion"></div>
+    </section>
+
+    <div class="carrito-fijo">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <!-- Panel lateral del carrito -->
+    <div class="sidebar-carrito" id="sidebarCarrito">
+      <div class="carrito-header">
+        <h3>Mi carrito</h3>
+        <button id="cerrarCarrito">&times;</button>
+      </div>
+      <ul id="listaCarrito"></ul>
+      <div class="carrito-footer">
+        <p id="totalCarrito">Total: $0.00</p>
+        <button id="comprarAhora">Comprar ahora</button>
+      </div>
+    </div>
+
+    <script src="scriptcategoria.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

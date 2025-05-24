@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibroNet - Tu librería online</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <!-- Cabecera -->
+    <header class="header">
+      <div class="logo">
+        <a href="home.html"><img src="img/logo2.jpg" alt="Logo LibroNet" /></a>
+      </div>
+
+      <nav>
+        <a href="home.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="#" onclick="abrirLoginModal()">Cuenta</a>
+      </nav>
+    </header>
+
+    <!-- Modal Login/Registro -->
+    <div id="loginModal" class="modal-login" style="display: none">
+      <div class="modal-contenido">
+        <span class="cerrar-modal" onclick="cerrarLoginModal()">&times;</span>
+
+        <div class="form-toggle">
+          <button onclick="mostrarFormulario('login')">Iniciar sesión</button>
+          <button onclick="mostrarFormulario('registro')">Registrarse</button>
+        </div>
+
+        <div id="formularioLogin" class="formulario">
+          <h2>Iniciar sesión</h2>
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button onclick="iniciarSesion()">Entrar</button>
+        </div>
+
+        <div id="formularioRegistro" class="formulario" style="display: none">
+          <h2>Crear cuenta</h2>
+          <input type="text" placeholder="Nombre completo" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button onclick="registrarse()">Registrarse</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+      <div class="hero-slider">
+        <div class="slide active">
+          <img src="img/hero1.png" alt="Banner promocional de libros" />
+        </div>
+        <div class="slide">
+          <img src="img/hero2.png" alt="Ofertas especiales de lectura" />
+        </div>
+        <div class="slide">
+          <img src="img/hero3.png" alt="Novedades literarias" />
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <h1>Descubre tu próxima lectura favorita</h1>
+        <button class="boton_libro" onclick="explorarLibros()">Explorar libros</button>
+      </div>
+    </section>
+
+    <!-- Sección Categorías -->
+    <section class="categorias" data-aos="fade-up">
+      <h2>Categorías</h2>
+
+      <div class="categorias-grid">
+        <a href="categorias.html?categoria=Ficcion">
+          <div class="categoria-btn ficcion" data-aos="fade-up"><i class="fas fa-book-open"></i> Ficción</div>
+        </a>
+
+        <a href="categorias.html?categoria=Tecnologia">
+          <div class="categoria-btn tecnologia" data-aos="fade-up"><i class="fas fa-microchip"></i> Tecnología</div>
+        </a>
+
+        <a href="categorias.html?categoria=Juvenil">
+          <div class="categoria-btn juvenil" data-aos="fade-up"><i class="fas fa-user-graduate"></i> Juvenil</div>
+        </a>
+
+        <a href="categorias.html?categoria=Academico">
+          <div class="categoria-btn academico" data-aos="fade-up"><i class="fas fa-university"></i> Académico</div>
+        </a>
+      </div>
+
+      <div id="verMasWrapper" data-aos="zoom-in" data-aos-duration="800">
+        <button id="verMasBtn" class="btn-vermas">Ver más</button>
+      </div>
+
+      <div class="categorias-grid extra-categorias" id="categoriasExtra" style="display: none">
+        <a href="categorias.html?categoria=filosofia">
+          <div class="categoria-btn filosofia" data-aos="fade-up"><i class="fas fa-brain"></i> Filosofía</div>
+        </a>
+
+        <a href="categorias.html?categoria=Historia">
+          <div class="categoria-btn historia" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-landmark"></i> Historia</div>
+        </a>
+
+        <a href="categorias.html?categoria=Arte">
+          <div class="categoria-btn arte" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-paint-brush"></i> Arte</div>
+        </a>
+      </div>
+
+      <div id="verMenosWrapper" style="display: none" data-aos="zoom-in" data-aos-duration="800">
+        <button id="verMenosBtn" class="btn-vermas">Ver menos</button>
+      </div>
+    </section>
+
+    <!-- Sección Novedades -->
+    <section class="novedades" id="novedades">
+      <h2>Últimos lanzamientos</h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="libro" data-categoria="ficcion">
+              <img src="img/libro2-ficcion.jpg" alt="Portada La Sombra del Viento" />
+              <h3>La Sombra del Viento</h3>
+              <p>Jen Minkman</p>
+              <button
+                onclick="mostrarDetalleLibro('La Sombra del Viento', 'Jen Minkman', 'Un viaje misterioso a través del tiempo.', 'img/libro2-ficcion.jpg', 14.50)"
+              >
+                Ver detalles
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="libro" data-categoria="tecnologia">
+              <img src="img/tec4.jpg" alt="Portada Dominando JavaScript" />
+              <h3>Dominando JavaScript</h3>
+              <p>Carlos Azaustre</p>
+              <button
+                onclick="mostrarDetalleLibro('Dominando JavaScript', 'Carlos Azaustre', 'Todo lo que necesitas saber para dominar JavaScript moderno.', 'img/tec4.jpg', 22.50)"
+              >
+                Ver detalles
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="libro" data-categoria="juvenil">
+              <img src="img/ju2.jpg" alt="Portada El Club Secreto" />
+              <h3>El Club Secreto</h3>
+              <p>Mitch Krpata</p>
+              <button
+                onclick="mostrarDetalleLibro('El Club secreto', 'Mitch Krpata', 'Un grupo de amigos descubre un misterio sorprendente.', 'img/ju2.jpg', 11.50)"
+              >
+                Ver detalles
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="libro" data-categoria="academico">
+              <img src="img/aca3.jpg" alt="Portada Química Orgánica" />
+              <h3>Química Orgánica</h3>
+              <p>Wade</p>
+              <button onclick="mostrarDetalleLibro('Química Orgánica', 'Wade', 'Guía completa para química orgánica.', 'img/aca3.jpg', 23.00)">
+                Ver detalles
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="libro" data-categoria="historia">
+              <img src="img/h2.jpg" alt="Portada" />
+              <h3>Civilizaciones Antiguas</h3>
+              <p>Paola Trifoni</p>
+              <button
+                onclick="mostrarDetalleLibro('Civilizaciones Antiguas', 'Paola Trifoni', 'Estudio de las primeras grandes civilizaciones.', 'img/h2.jpg', 18.50)"
+              >
+                Ver detalles
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- Sección Más Vendidos -->
+    <section class="lo-mas-vendido" data-aos="fade-up" data-aos-duration="1000">
+      <h2>Lo Más Vendido</h2>
+
+      <div class="grid">
+        <div class="producto" precio="11.75" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/libro3-ficcion.jpg" alt="Portada El fin de la eternidad" />
+          <h3>El fin de la eternidad</h3>
+          <p class="precio">$11.75</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="producto" precio="19.50" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/a2.jpg" alt="Portada Historia del arte moderno" />
+          <h3>Historia del arte moderno</h3>
+          <p class="precio">$19.50</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="producto" precio="12.00" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/ju4.jpg" alt="Portada Secretos del castillo" />
+          <h3>Secretos del castillo</h3>
+          <p class="precio">$12.00</p>
+          <button>Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section class="testimonios" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="titulo-testimonios">Lo que dicen nuestros clientes</h2>
+
+      <div class="testimonio-container">
+        <div class="testimonio" data-aos="flip-left" data-aos-duration="1000">
+          <div class="testimonio-info">
+            <h3>Juan Pérez</h3>
+            <p>"Me encanta comprar en este sitio. Tienen una gran selección de libros y el envío es rápido."</p>
+          </div>
+        </div>
+
+        <div class="testimonio" data-aos="flip-left" data-aos-duration="1200">
+          <div class="testimonio-info">
+            <h3>Ana Gómez</h3>
+            <p>"Una experiencia maravillosa. Los precios son muy buenos y siempre encuentro lo que busco."</p>
+          </div>
+        </div>
+
+        <div class="testimonio" data-aos="flip-left" data-aos-duration="1400">
+          <div class="testimonio-info">
+            <h3>Mario Rodríguez</h3>
+            <p>"Excelente atención al cliente. Además, tienen recomendaciones personalizadas que son geniales."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="carrito-fijo">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <!-- Panel lateral del carrito -->
+    <div class="sidebar-carrito" id="sidebarCarrito">
+      <div class="carrito-header">
+        <h3>Mi carrito</h3>
+        <button id="cerrarCarrito">&times;</button>
+      </div>
+      <ul id="listaCarrito"></ul>
+      <div class="carrito-footer">
+        <p id="totalCarrito">Total: $0.00</p>
+        <button id="comprarAhora">Comprar ahora</button>
+      </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <p>&copy; 2025 LibroNet - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whisper-carousel@1.0.7/dist/whisper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="Script.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
