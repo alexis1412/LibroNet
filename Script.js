@@ -196,12 +196,12 @@ function setupEventListeners() {
   });
 }
 
-// Inicialización
+
 document.addEventListener("DOMContentLoaded", () => {
   initSlider();
   setupEventListeners();
 
-  // Inicializar Swiper si existe
+
   if (typeof Swiper !== "undefined") {
     new Swiper(".swiper", {
       slidesPerView: 3,

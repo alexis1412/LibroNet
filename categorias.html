@@ -13,14 +13,40 @@
   <body>
     <header class="header">
       <div class="logo">
-        <a href="home.html"><img src="img/logo2.jpg" alt="" /></a>
+        <a href="index.html"><img src="img/logo2.jpg" alt="" /></a>
       </div>
       <nav>
-        <a href="home.html">Inicio</a>
+        <a href="index.html">Inicio</a>
         <a href="categorias.html">Categorías</a>
         <a href="login.html">Cuenta</a>
       </nav>
     </header>
+
+    <div id="loginModal" class="modal-login" style="display: none">
+      <div class="modal-contenido">
+        <span class="cerrar-modal" onclick="cerrarLoginModal()">&times;</span>
+
+        <div class="form-toggle">
+          <button onclick="mostrarFormulario('login')">Iniciar sesión</button>
+          <button onclick="mostrarFormulario('registro')">Registrarse</button>
+        </div>
+
+        <div id="formularioLogin" class="formulario">
+          <h2>Iniciar sesión</h2>
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button onclick="iniciarSesion()">Entrar</button>
+        </div>
+
+        <div id="formularioRegistro" class="formulario" style="display: none">
+          <h2>Crear cuenta</h2>
+          <input type="text" placeholder="Nombre completo" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button onclick="registrarse()">Registrarse</button>
+        </div>
+      </div>
+    </div>
 
     <section class="pagina-categorias">
       <h2>Categorías</h2>

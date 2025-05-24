@@ -19,6 +19,40 @@ if (categoriaURL) {
   });
 }
 
+
+
+function abrirLoginModal() {
+  document.getElementById('loginModal').style.display = 'flex';
+  mostrarFormulario('login'); 
+}
+
+function cerrarLoginModal() {
+  document.getElementById('loginModal').style.display = 'none';
+}
+
+function mostrarFormulario(tipo) {
+  const loginForm = document.getElementById('formularioLogin');
+  const registroForm = document.getElementById('formularioRegistro');
+
+  if (tipo === 'login') {
+    loginForm.style.display = 'block';
+    registroForm.style.display = 'none';
+  } else {
+    loginForm.style.display = 'none';
+    registroForm.style.display = 'block';
+  }
+}
+
+// Cerrar el modal si se hace clic fuera
+window.addEventListener('click', function (e) {
+  const modal = document.getElementById('loginModal');
+  if (e.target === modal) {
+    cerrarLoginModal();
+  }
+});
+
+
+
 botones.forEach((btn) => {
   btn.addEventListener("click", () => {
     botones.forEach((b) => b.classList.remove("activo"));
