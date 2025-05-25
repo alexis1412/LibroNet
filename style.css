@@ -109,73 +109,6 @@ nav a {
   margin-top: 50px;
 }
 
-/* Buscador */
-.buscar {
-  margin-top: 10px;
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.c-formContainer {
-  position: relative;
-  font-weight: 700;
-  font-size: 25px;
-}
-
-.c-formContainer .c-form {
-  width: 45rem;
-  height: 4.6rem;
-  position: relative;
-  margin: auto;
-  background-color: #1f2d5a98;
-  border-radius: 10px;
-}
-
-.c-formContainer .c-form__input,
-.c-formContainer .c-form__buttonLabel {
-  visibility: visible;
-  opacity: 1;
-}
-
-.c-form {
-  padding: 0.625em;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.c-form__input,
-.c-form__button {
-  font: inherit;
-  border: 0;
-  outline: 0;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.c-form__input {
-  color: black;
-  padding: 0 0.714em;
-  font-size: 1em;
-  opacity: 0.1;
-  font-weight: 200;
-  flex-grow: 1;
-}
-
-.c-form__button {
-  color: inherit;
-  padding: 0;
-  height: 90%;
-  width: 6em;
-  top: -25px;
-  position: relative;
-  padding: 1.7rem 2.5rem;
-  background-color: #f15b2400;
-}
-
 /* Categorías */
 .categorias {
   padding: 3rem 1rem;
@@ -309,6 +242,7 @@ nav a {
 .swiper-wrapper {
   display: flex;
   align-items: center;
+  
 }
 
 .swiper-slide {
@@ -316,7 +250,10 @@ nav a {
   justify-content: center;
   left: 50px;
   position: relative;
+  
 }
+
+
 
 .libro {
   background: white;
@@ -734,7 +671,7 @@ nav a {
 .modal-swal {
   border-radius: 12px;
   padding: 20px;
-  max-width: 380px;
+  max-width: 400px;
   height: 95%;
 }
 
