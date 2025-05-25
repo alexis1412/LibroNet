@@ -37,17 +37,21 @@
 
         <div id="formularioLogin" class="formulario">
           <h2>Iniciar sesión</h2>
-          <input type="email" placeholder="Correo electrónico" required />
-          <input type="password" placeholder="Contraseña" required />
+          <form action="" method="post">
+          <input type="email"  maxlength="70" placeholder="Correo electrónico" required />
+          <input type="password"  maxlength="15" placeholder="Contraseña" required />
           <button onclick="iniciarSesion()">Entrar</button>
+          </form>
         </div>
 
         <div id="formularioRegistro" class="formulario" style="display: none">
           <h2>Crear cuenta</h2>
-          <input type="text" placeholder="Nombre completo" required />
-          <input type="email" placeholder="Correo electrónico" required />
-          <input type="password" placeholder="Contraseña" required />
+          <form action="" method="post">
+          <input type="text" pattern="[A-Za-z]+"  placeholder="Nombre completo" required />
+          <input type="email" maxlength="70" placeholder="Correo electrónico" required />
+          <input type="password" maxlength="15" placeholder="Contraseña" required />
           <button onclick="registrarse()">Registrarse</button>
+          </form>
         </div>
       </div>
     </div>
